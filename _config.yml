@@ -5,15 +5,15 @@
 # Site
 title: 1337rokudenashi
 subtitle: ''
-description: ''
-keywords:
+description: 'Penetration Tester · Forensic Investigator · Information Security Analyst · Open Source Intelligence Analyst'
+keywords: 1337rokudenashi
 author: 1337rokudenashi
 language: en
 timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://1337rokudenashi.dev/'
-url: https://1337rokudenashi.dev/
+url: https://1337rokudenashi.github.io/
 permalink: :title/
 permalink_defaults:
 pretty_urls:
