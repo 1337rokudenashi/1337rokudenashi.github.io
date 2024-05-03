@@ -4,7 +4,7 @@ excerpt: A virtual CTF for the hacking community!
 date: 2023-11-19 06:59:00
 tags: [1337uplivectf]
 categories:
-  - [Capture The Flag]
+  - [Write-up]
 index_img: https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi.github.io/main/reincarnation.png
 banner_img: https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi.github.io/main/1337rokudenashi.png
 ---
