@@ -10,8 +10,7 @@ banner_img: https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi.gi
 ---
 
 Reddit
-50
-I heard there's a flag somewhere on our subreddit?! Wait, intigriti has a subreddit? 🤔
+I heard there's a flag somewhere on our subreddit?! Wait, intigriti has a subreddit?
 
 <blockquote class="reddit-embed-bq" data-embed-height="220"><a href="https://www.reddit.com/r/Intigriti/comments/17vtfhs/comment/k9mkfxn/">Comment</a><br> by<a href="https://www.reddit.com/user/_CryptoCat23/">u/_CryptoCat23</a> from discussion<a href="https://www.reddit.com/r/Intigriti/comments/17vtfhs/1337up_live_ctf_2023_team_registrations_are_now/"><no value=""></no></a><br> in<a href="https://www.reddit.com/r/Intigriti/">Intigriti</a></blockquote><script async="" src="https://embed.reddit.com/widgets.js" charset="UTF-8"></script>
 
