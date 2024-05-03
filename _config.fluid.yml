@@ -556,7 +556,7 @@ post:
     # 字数统计
     # Word count
     wordcount:
-      enable: true
+      enable: false
 
     # 估计阅读全文需要的时长
     # Estimated reading time
