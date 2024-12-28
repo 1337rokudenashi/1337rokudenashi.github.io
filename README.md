@@ -1,2 +1,1 @@
-# 1337rokudenashi.github.io
-1337rokudenashi
+Hai, saya Alpha Prima Galatheo Qallbu (1337rokudenashi). Saya memiliki ketertarikan, pengetahuan, serta keterampilan sebagai Security Researcher.
