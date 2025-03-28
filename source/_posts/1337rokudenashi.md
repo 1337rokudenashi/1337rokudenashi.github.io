@@ -9,4 +9,4 @@ index_img: https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi.git
 banner_img: https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi.github.io/main/1337rokudenashi.png
 ---
 
-Hai, saya Alpha Prima Galatheo Qallbu (1337rokudenashi). Saya memiliki ketertarikan, pengetahuan, serta keterampilan sebagai Security Researcher.
+Hai! Saya Alpha Prima Galatheo Qallbu (1337rokudenashi), seorang Security Researcher · Security Engineer. Saya memiliki ketertarikan, pengetahuan, serta keterampilan dalam keamanan ofensif.
