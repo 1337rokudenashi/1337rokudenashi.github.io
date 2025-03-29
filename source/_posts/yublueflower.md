@@ -1,7 +1,7 @@
 ---
 title: yublueflower
 excerpt: A suite integrating open-source workflows tailored for offensive security.
-date: 2023-03-03 01:37:00
+date: 2025-03-01 01:37:00
 tags: [yublueflower]
 categories:
   - [Tools]
@@ -181,7 +181,7 @@ We welcome contributions! Feel free to fork the repository, improve the tool, an
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/1337rokudenashi/yublueflower/blob/main/LICENSE) file for details.
 
 ## Author
 
