@@ -4,7 +4,7 @@ excerpt: A suite integrating open-source workflows tailored for offensive securi
 date: 2025-03-01 01:37:00
 tags: [yublueflower]
 categories:
-  - [Tools]
+  - [1337rokudenashi]
 index_img: https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi.github.io/main/reincarnation.png
 banner_img: https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi.github.io/main/1337rokudenashi.png
 ---
