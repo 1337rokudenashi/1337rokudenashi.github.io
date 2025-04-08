@@ -4,7 +4,7 @@ excerpt: A RITSEC CTF event.
 date: 2024-04-07 23:00:00
 tags: [ritsecctf]
 categories:
-  - [Write-up]
+  - [Capture The Flag]
 index_img: https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi.github.io/main/reincarnation.png
 banner_img: https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi.github.io/main/1337rokudenashi.png
 ---
