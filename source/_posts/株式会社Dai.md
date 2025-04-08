@@ -11,4 +11,4 @@ banner_img: https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi.gi
 
 今日は、IssueHuntが行っている Vulnerability Disclosure Program (VDP) にまた貢献しました。株式会社Dai のシステムの安全を守る手助けができて、とても嬉しいです。
 
-Hall of Fame for Security Researchers at 株式会社Dai。(see [1337rokudenashi]())
+Hall of Fame for Security Researchers at 株式会社Dai。(see [1337rokudenashi](https://issuehunt.io/programs/2d67e8c4-5e59-4a12-ad05-8dcc52c35917/hof))
