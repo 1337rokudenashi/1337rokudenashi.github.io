@@ -54,6 +54,31 @@
   
   
   <entry>
+    <title>Hall of Fame for Security Researchers at 株式会社Dai</title>
+    <link href="/%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BEDai/"/>
+    <url>/%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BEDai/</url>
+    
+    <content type="html"><![CDATA[<p>今日は、IssueHuntが行っている Vulnerability Disclosure Program (VDP) にまた貢献しました。株式会社Dai のシステムの安全を守る手助けができて、とても嬉しいです。</p><p>Hall of Fame for Security Researchers at 株式会社Dai。(see <a href="">1337rokudenashi</a>)</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Vulnerability Disclosure Program</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>issuehunt</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>CVE-2017-5871 - URL Redirection to Untrusted Site (Open Redirect) - CWE-601</title>
     <link href="/cve-2017-5871/"/>
     <url>/cve-2017-5871/</url>
