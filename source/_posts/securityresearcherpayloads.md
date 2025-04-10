@@ -9,8 +9,6 @@ index_img: https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi.git
 banner_img: https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi.github.io/main/1337rokudenashi.png
 ---
 
-### **Payloads for Security Researcher**
-
 Ini adalah bagian dari instruksi yang dieksekusi untuk mengeksploitasi kerentanan dalam sistem. 
 
 **Payloads for SQL Injection Authentication Bypass**
