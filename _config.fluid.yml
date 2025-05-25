@@ -18,7 +18,7 @@
 
 # 用于浏览器标签的图标
 # Icon for browser tab
-favicon: https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi.github.io/main/rokudenashi.png
+favicon: https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi.github.io/main/rokudenashi.ico
 
 # 用于苹果设备的图标
 # Icon for Apple touch
@@ -420,9 +420,7 @@ footer:
   # 页脚第一行文字的 HTML，建议保留 Fluid 的链接，用于向更多人推广本主题
   # HTML of the first line of the footer, it is recommended to keep the Fluid link to promote this theme to more people
   content: '
-    <a href="https://nodejs.org/" target="_blank" rel="nofollow noopener"><span>node.js</span></a>
-    <i class="iconfont icon-love"></i>
-    <a href="https://1337rokudenashi.github.io/" target="_blank" rel="nofollow noopener"><span>1337rokudenashi</span></a>
+    <a href="https://1337rokudenashi.github.io/" target="_blank" rel="nofollow noopener"><span>1337rokudenashi</span></a><span> ❤️ Security Researcher · Security Engineer</span>
   '
 
   # 展示网站的 PV、UV 统计数
