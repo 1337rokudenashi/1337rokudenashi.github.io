@@ -5,8 +5,8 @@ date: 2023-11-19 06:59:00
 tags: [1337uplivectf]
 categories:
   - [Capture The Flag]
-index_img: https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi.github.io/main/reincarnation.png
-banner_img: https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi.github.io/main/1337rokudenashi.png
+index_img: https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi.github.io/main/yublueflower.jpg
+banner_img: https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi.github.io/main/1337yublueflower.jpg
 ---
 
 Reddit
