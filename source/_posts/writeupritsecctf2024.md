@@ -5,8 +5,8 @@ date: 2024-04-07 23:00:00
 tags: [ritsecctf]
 categories:
   - [Capture The Flag]
-index_img: https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi.github.io/main/reincarnation.png
-banner_img: https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi.github.io/main/1337rokudenashi.png
+index_img: https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi.github.io/main/yublueflower.jpg
+banner_img: https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi.github.io/main/1337yublueflower.jpg
 ---
 
 After the break-in to his lab Anthony found a suspicious new file on his desktop named README.txt. Anthony opened the file and found that it was a ransom demand from whomever stole his invention. Perhaps the contents of the ransom note contain a clue to the attacker's identity.
