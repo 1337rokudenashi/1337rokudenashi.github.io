@@ -5,8 +5,8 @@ date: 2025-03-31 01:37:00
 tags: [securityresearcher]
 categories:
   - [Resources for Security Researcher]
-index_img: https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi.github.io/main/reincarnation.png
-banner_img: https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi.github.io/main/1337rokudenashi.png
+index_img: https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi.github.io/main/yublueflower.jpg
+banner_img: https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi.github.io/main/1337yublueflower.jpg
 ---
 
 Ini adalah bagian dari instruksi yang dieksekusi untuk mengeksploitasi kerentanan dalam sistem. 
