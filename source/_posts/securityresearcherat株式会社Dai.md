@@ -1,5 +1,5 @@
 ---
-title: Hall of Fame for Security Researchers at 株式会社Dai
+title: Hall of Fame | Security Researchers at 株式会社Dai
 excerpt: 今日は、IssueHuntが行っている Vulnerability Disclosure Program (VDP) にまた貢献しました...
 date: 2024-12-10 01:37:00
 tags: [issuehunt]
