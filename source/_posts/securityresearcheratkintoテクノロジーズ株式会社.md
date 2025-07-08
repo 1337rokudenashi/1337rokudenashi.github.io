@@ -1,5 +1,5 @@
 ---
-title: Hall of Fame for Security Researchers at KINTOテクノロジーズ株式会社
+title: Hall of Fame | Security Researchers at KINTOテクノロジーズ株式会社
 excerpt: 今日は、IssueHuntが行っている Vulnerability Disclosure Program (VDP) にまた貢献しました...
 date: 2025-02-17 01:37:00
 tags: [issuehunt]
