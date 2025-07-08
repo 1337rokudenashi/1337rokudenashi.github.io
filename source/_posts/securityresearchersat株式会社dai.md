@@ -4,7 +4,7 @@ excerpt: 今日は、IssueHuntが行っている Vulnerability Disclosure Progra
 date: 2024-12-10 01:37:00
 tags: [issuehunt]
 categories:
-  - [Vulnerability Disclosure Program, Security Researcher]
+  - [Vulnerability Disclosure Program]
 index_img: https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi.github.io/main/yublueflower.jpg
 banner_img: https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi.github.io/main/1337yublueflower.jpg
 ---
