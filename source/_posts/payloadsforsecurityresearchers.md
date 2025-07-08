@@ -1,10 +1,10 @@
 ---
-title: Payloads for Security Researcher
+title: Payloads for Security Researchers
 excerpt: Ini adalah bagian dari instruksi yang dieksekusi untuk mengeksploitasi kerentanan dalam sistem.
 date: 2025-03-31 01:37:00
 tags: [securityresearcher]
 categories:
-  - [Resources for Security Researcher]
+  - [Security Researcher]
 index_img: https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi.github.io/main/yublueflower.jpg
 banner_img: https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi.github.io/main/1337yublueflower.jpg
 ---
