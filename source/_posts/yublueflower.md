@@ -1,6 +1,6 @@
 ---
 title: yublueflower
-excerpt: A suite integrating open-source workflows tailored for offensive security.
+excerpt: A tailored workflow suite for offensive security.
 date: 2025-03-01 01:37:00
 tags: [yublueflower]
 categories:
