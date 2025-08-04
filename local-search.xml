@@ -130,8 +130,8 @@
   
   <entry>
     <title>Write-up | RITSEC CTF 2024</title>
-    <link href="/writeupritsecctf2024/"/>
-    <url>/writeupritsecctf2024/</url>
+    <link href="/YWpXJMqZbALvNtC/"/>
+    <url>/YWpXJMqZbALvNtC/</url>
     
     <content type="html"><![CDATA[<p>After the break-in to his lab Anthony found a suspicious new file on his desktop named README.txt. Anthony opened the file and found that it was a ransom demand from whomever stole his invention. Perhaps the contents of the ransom note contain a clue to the attacker’s identity.</p><p>README.txt</p><p>—–BEGIN BITCOIN SIGNED MESSAGE—–<br>Your invention has been taken.<br>If you ever want to see it again send 10 BTC to this address:</p><p>bc1qd7qtdayjnl382qmfl4tl4yaejuv5py0n3uwq6p</p><p>You have 3 days.<br>—–BEGIN BITCOIN SIGNATURE—–<br>H3zAMJyVW2j1+Y7A+w8wflZRUmggR+Sn532ZuAGtGLcxEERvymcPrtnXVkB+0mBqCUAb0AQwyPFJfGxvIeQDPpE&#x3D;<br>—–END BITCOIN SIGNATURE—–</p><p><img src="https://raw.githubusercontent.com/1337rokudenashi/writeup/main/ritsecctf2024.png" alt="Write-up | RITSEC CTF 2024"></p><p>RS{26f9c2fcdfe8e86804eb}</p>]]></content>
     
