@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>NotifyとDiscordでセキュリティ通知を連携させる方法</title>
+    <link href="/bqwyzxljvtnrcpm/"/>
+    <url>/bqwyzxljvtnrcpm/</url>
+    
+    <content type="html"><![CDATA[<h3 id="NotifyとDiscordでセキュリティ通知を連携させる方法"><a href="#NotifyとDiscordでセキュリティ通知を連携させる方法" class="headerlink" title="NotifyとDiscordでセキュリティ通知を連携させる方法"></a>NotifyとDiscordでセキュリティ通知を連携させる方法</h3><p>セキュリティスキャンの結果を、Discordですぐに確認したいですか？</p><h4 id="1-Discordでウェブフックを準備しましょう"><a href="#1-Discordでウェブフックを準備しましょう" class="headerlink" title="1. Discordでウェブフックを準備しましょう"></a>1. Discordでウェブフックを準備しましょう</h4><p>Discordのサーバーで、「<strong>チャンネル設定</strong>」を開き、「<strong>連携サービス</strong>」へ進みます。「<strong>ウェブフックを作成</strong>」をクリックして、名前をつけます（例：「セキュリティアラート」）。すると、「<strong>ウェブフックURLをコピー</strong>」というボタンが表示されるので、それを押してくださいね。これが今回の連携に欠かせない、大切な鍵となります。</p><hr><h4 id="2-ProjectDiscovery-Notifyをインストールしましょう"><a href="#2-ProjectDiscovery-Notifyをインストールしましょう" class="headerlink" title="2. ProjectDiscovery Notifyをインストールしましょう"></a>2. ProjectDiscovery Notifyをインストールしましょう</h4><p>まずは、Goというプログラミング言語がインストールされているか確認してください（バージョン1.16以上が必要です）。ターミナルを開いて、以下のコマンドを実行します。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">go install -v github.com/projectdiscovery/notify/cmd/notify@latest<br></code></pre></td></tr></table></figure><p>正しくインストールできたか、<code>notify -h</code>と入力して確認してみましょう。</p><hr><h4 id="3-Notifyの設定ファイルを準備しましょう"><a href="#3-Notifyの設定ファイルを準備しましょう" class="headerlink" title="3. Notifyの設定ファイルを準備しましょう"></a>3. Notifyの設定ファイルを準備しましょう</h4><p><code>~/.config/notify/provider-config.yaml</code>という設定ファイルを作成するか、すでにある場合はそれを開いてください。以下の内容をファイルに書き込んで、先ほどコピーした<strong>DiscordのウェブフックURL</strong>を貼り付けます。</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">discord:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">discord_webhook_url:</span> <span class="hljs-string">&quot;ここにDiscordのウェブフックURLを貼り付けてください&quot;</span><br></code></pre></td></tr></table></figure><p>入力が終わったら、ファイルを保存してくださいね。</p><hr><h4 id="4-最初の通知を送ってみましょう！"><a href="#4-最初の通知を送ってみましょう！" class="headerlink" title="4. 最初の通知を送ってみましょう！"></a>4. 最初の通知を送ってみましょう！</h4><p>ターミナルから、テストメッセージを送信してみましょう。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;こんにちは、1337rokudenashiさん！&quot;</span> | notify -provider discord<br></code></pre></td></tr></table></figure><p><strong>大切なこと</strong>：Notifyにメッセージの送り先を教えるために、必ず最後に<code>-provider discord</code>とつけてくださいね。あとは、Discordを開いて確認してみましょう。無事にメッセージが届いているはずです。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>1337rokudenashi</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>1337rokudenashi</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Payloads for Security Researchers</title>
     <link href="/bqvzjxwmrlcptyn/"/>
     <url>/bqvzjxwmrlcptyn/</url>
