@@ -16,16 +16,16 @@
   <meta name="author" content="1337rokudenashi">
   <meta name="keywords" content="1337rokudenashi">
   
-    <meta name="description" content="セキュリティスキャンの結果を、Discordですぐに確認したいですか？">
+    <meta name="description" content="Ingin melihat hasil pemindaian keamanan kamu langsung di Discord?">
 <meta property="og:type" content="article">
-<meta property="og:title" content="NotifyとDiscordでセキュリティ通知を連携させる方法">
+<meta property="og:title" content="Integrasi Notifikasi Keamanan dengan Notify dan Discord">
 <meta property="og:url" content="https://1337rokudenashi.github.io/bqwyzxljvtnrcpm/index.html">
 <meta property="og:site_name" content="1337rokudenashi">
-<meta property="og:description" content="セキュリティスキャンの結果を、Discordですぐに確認したいですか？">
+<meta property="og:description" content="Ingin melihat hasil pemindaian keamanan kamu langsung di Discord?">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi.github.io/main/yublueflower.jpg">
 <meta property="article:published_time" content="2025-05-01T01:37:00.000Z">
-<meta property="article:modified_time" content="2025-08-04T07:46:16.645Z">
+<meta property="article:modified_time" content="2025-08-04T08:16:36.186Z">
 <meta property="article:author" content="1337rokudenashi">
 <meta property="article:tag" content="1337rokudenashi">
 <meta name="twitter:card" content="summary_large_image">
@@ -33,7 +33,7 @@
   
   
   
-  <title>NotifyとDiscordでセキュリティ通知を連携させる方法 - 1337rokudenashi</title>
+  <title>Integrasi Notifikasi Keamanan dengan Notify dan Discord - 1337rokudenashi</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -199,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="NotifyとDiscordでセキュリティ通知を連携させる方法"></span>
+            <span id="subtitle" data-typed-text="Integrasi Notifikasi Keamanan dengan Notify dan Discord"></span>
           
         </div>
 
@@ -226,7 +226,7 @@
         
         
         
-          2 mins
+          1 mins
         
       </span>
     
@@ -263,28 +263,30 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">NotifyとDiscordでセキュリティ通知を連携させる方法</h1>
+            <h1 id="seo-header">Integrasi Notifikasi Keamanan dengan Notify dan Discord</h1>
             
             
               <div class="markdown-body">
                 
-                <h3 id="NotifyとDiscordでセキュリティ通知を連携させる方法"><a href="#NotifyとDiscordでセキュリティ通知を連携させる方法" class="headerlink" title="NotifyとDiscordでセキュリティ通知を連携させる方法"></a>NotifyとDiscordでセキュリティ通知を連携させる方法</h3><p>セキュリティスキャンの結果を、Discordですぐに確認したいですか？</p>
-<h4 id="1-Discordでウェブフックを準備しましょう"><a href="#1-Discordでウェブフックを準備しましょう" class="headerlink" title="1. Discordでウェブフックを準備しましょう"></a>1. Discordでウェブフックを準備しましょう</h4><p>Discordのサーバーで、「<strong>チャンネル設定</strong>」を開き、「<strong>連携サービス</strong>」へ進みます。「<strong>ウェブフックを作成</strong>」をクリックして、名前をつけます（例：「セキュリティアラート」）。すると、「<strong>ウェブフックURLをコピー</strong>」というボタンが表示されるので、それを押してくださいね。これが今回の連携に欠かせない、大切な鍵となります。</p>
+                <p>Ingin melihat hasil pemindaian keamanan kamu langsung di Discord?</p>
+<h4 id="Siapkan-Webhook-Discord"><a href="#Siapkan-Webhook-Discord" class="headerlink" title="Siapkan Webhook Discord"></a>Siapkan Webhook Discord</h4><p>Di server Discord kamu, buka <strong>Pengaturan Saluran</strong> lalu pilih <strong>Integrasi</strong>. Klik <strong>Buat Webhook</strong> baru, beri nama (misalnya “Security Alerts”), dan <strong>salin URL Webhook</strong> yang diberikan. Ini adalah kunci utama untuk integrasi kita.</p>
 <hr>
-<h4 id="2-ProjectDiscovery-Notifyをインストールしましょう"><a href="#2-ProjectDiscovery-Notifyをインストールしましょう" class="headerlink" title="2. ProjectDiscovery Notifyをインストールしましょう"></a>2. ProjectDiscovery Notifyをインストールしましょう</h4><p>まずは、Goというプログラミング言語がインストールされているか確認してください（バージョン1.16以上が必要です）。ターミナルを開いて、以下のコマンドを実行します。</p>
+<h4 id="Instalasi-ProjectDiscovery-Notify"><a href="#Instalasi-ProjectDiscovery-Notify" class="headerlink" title="Instalasi ProjectDiscovery Notify"></a>Instalasi ProjectDiscovery Notify</h4><p>Pastikan kamu sudah menginstal <strong>Go (versi 1.16+)</strong>. Buka terminal dan jalankan perintah berikut:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">go install -v github.com/projectdiscovery/notify/cmd/notify@latest<br></code></pre></td></tr></table></figure>
 
-<p>正しくインストールできたか、<code>notify -h</code>と入力して確認してみましょう。</p>
+<p>Kamu bisa menjalankan <code>notify -h</code> untuk melihat bantuan.</p>
 <hr>
-<h4 id="3-Notifyの設定ファイルを準備しましょう"><a href="#3-Notifyの設定ファイルを準備しましょう" class="headerlink" title="3. Notifyの設定ファイルを準備しましょう"></a>3. Notifyの設定ファイルを準備しましょう</h4><p><code>~/.config/notify/provider-config.yaml</code>という設定ファイルを作成するか、すでにある場合はそれを開いてください。以下の内容をファイルに書き込んで、先ほどコピーした<strong>DiscordのウェブフックURL</strong>を貼り付けます。</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">discord:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">discord_webhook_url:</span> <span class="hljs-string">&quot;ここにDiscordのウェブフックURLを貼り付けてください&quot;</span><br></code></pre></td></tr></table></figure>
+<h4 id="Konfigurasi-Notify"><a href="#Konfigurasi-Notify" class="headerlink" title="Konfigurasi Notify"></a>Konfigurasi Notify</h4><p>Buat atau buka konfigurasi di <code>~/.config/notify/provider-config.yaml</code>. Tambahkan konfigurasi berikut, dan <strong>ganti teks placeholder dengan URL Webhook Discord kamu</strong>:</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">discord:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">discord_webhook_url:</span> <span class="hljs-string">&quot;PASTE_YOUR_DISCORD_WEBHOOK_URL_HERE&quot;</span><br></code></pre></td></tr></table></figure>
 
-<p>入力が終わったら、ファイルを保存してくださいね。</p>
+<p>Simpan konfigurasi Notify setelah selesai.</p>
 <hr>
-<h4 id="4-最初の通知を送ってみましょう！"><a href="#4-最初の通知を送ってみましょう！" class="headerlink" title="4. 最初の通知を送ってみましょう！"></a>4. 最初の通知を送ってみましょう！</h4><p>ターミナルから、テストメッセージを送信してみましょう。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;こんにちは、1337rokudenashiさん！&quot;</span> | notify -provider discord<br></code></pre></td></tr></table></figure>
+<h4 id="Kirim-Notifikasi-Pertama-Kamu"><a href="#Kirim-Notifikasi-Pertama-Kamu" class="headerlink" title="Kirim Notifikasi Pertama Kamu"></a>Kirim Notifikasi Pertama Kamu</h4><p>Dari terminal, coba kirim pesan pertama kamu:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Hai, 1337rokudenashi!&quot;</span> | notify -provider discord<br></code></pre></td></tr></table></figure>
 
-<p><strong>大切なこと</strong>：Notifyにメッセージの送り先を教えるために、必ず最後に<code>-provider discord</code>とつけてくださいね。あとは、Discordを開いて確認してみましょう。無事にメッセージが届いているはずです。</p>
+<p>Selalu gunakan <code>-provider discord</code> agar Notify tahu harus mengirim pesan ke Discord. Periksa Discord kamu, maka…, pesan seharusnya sudah masuk.</p>
+<hr>
+<p>Itu saja! Sekarang, notifikasi keamanan kamu bisa langsung terkirim ke Discord.</p>
 
                 
               </div>
@@ -330,7 +332,7 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>NotifyとDiscordでセキュリティ通知を連携させる方法</div>
+      <div>Integrasi Notifikasi Keamanan dengan Notify dan Discord</div>
       <div>https://1337rokudenashi.github.io/bqwyzxljvtnrcpm/</div>
     </div>
     <div class="license-meta">
