@@ -1,6 +1,6 @@
 ---
 title: Integrasi Notifikasi Keamanan dengan Notify dan Discord
-excerpt: Ingin melihat hasil pemindaian keamanan kamu langsung di Discord?
+excerpt: Di server Discord kamu, buka Pengaturan Saluran lalu pilih Integrasi. Klik Buat Webhook baru, beri nama (misalnya "Security Alerts"), dan salin URL Webhook yang diberikan...
 date: 2025-05-01 01:37:00
 tags: [1337rokudenashi]
 categories:
@@ -9,17 +9,11 @@ index_img: https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi.git
 banner_img: https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi.github.io/main/1337yublueflower.jpg
 ---
 
-Ingin melihat hasil pemindaian keamanan kamu langsung di Discord?
-
-#### Siapkan Webhook Discord
-
 Di server Discord kamu, buka **Pengaturan Saluran** lalu pilih **Integrasi**. Klik **Buat Webhook** baru, beri nama (misalnya "Security Alerts"), dan **salin URL Webhook** yang diberikan. Ini adalah kunci utama untuk integrasi kita.
 
 ---
 
-#### Instalasi ProjectDiscovery Notify
-
-Pastikan kamu sudah menginstal **Go (versi 1.16+)**. Buka terminal dan jalankan perintah berikut:
+Pastikan kamu sudah menginstal **Go (versi 1.24+)**. Buka terminal dan jalankan perintah berikut:
 
 ```bash
 go install -v github.com/projectdiscovery/notify/cmd/notify@latest
@@ -28,8 +22,6 @@ go install -v github.com/projectdiscovery/notify/cmd/notify@latest
 Kamu bisa menjalankan `notify -h` untuk melihat bantuan.
 
 ---
-
-#### Konfigurasi Notify
 
 Buat atau buka konfigurasi di `~/.config/notify/provider-config.yaml`. Tambahkan konfigurasi berikut, dan **ganti teks placeholder dengan URL Webhook Discord kamu**:
 
@@ -41,8 +33,6 @@ discord:
 Simpan konfigurasi Notify setelah selesai.
 
 ---
-
-#### Kirim Notifikasi Pertama Kamu
 
 Dari terminal, coba kirim pesan pertama kamu:
 
