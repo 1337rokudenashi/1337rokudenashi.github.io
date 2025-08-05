@@ -228,5 +228,30 @@
   
   
   
+  <entry>
+    <title>Write-Up | Interact with Nuclei</title>
+    <link href="/bnhqztdxrwvleup/"/>
+    <url>/bnhqztdxrwvleup/</url>
+    
+    <content type="html"><![CDATA[<p>Nuclei adalah pemindai kerentanan modern berkinerja tinggi yang memanfaatkan templat berbasis YAML sederhana. Ini memberdayakan kamu untuk merancang skenario deteksi kerentanan kustom yang meniru kondisi dunia nyata, yang mengarah ke nol positif palsu.</p><p>🔹 <code>nuclei -u &quot;http://1337rokudenashi.dev&quot; -silent</code></p><p>Melakukan pemindaian pada satu URL secara langsung. Flag <code>-silent</code> digunakan agar hasil yang ditampilkan hanya temuan penting, tanpa detail tambahan dari template.</p><hr><p>🔹 <code>nuclei -list 1337rokudenashi.txt -silent</code></p><p>Memindai banyak URL sekaligus dari file <code>1337rokudenashi.txt</code>. Cocok digunakan untuk bug bounty atau testing skala besar. Tetap sunyi, hanya menampilkan hasil valid.</p><hr><p>🔹 <code>nuclei -u &quot;http://1337rokudenashi.dev&quot; -header &quot;Cookie: laravel_session=...; XSRF-TOKEN=...&quot; -silent</code></p><p>Menyertakan header (seperti cookie) untuk melakukan scan pada endpoint yang membutuhkan autentikasi. Penting untuk menguji area yang tidak publik.</p><hr><p>🔹 <code>nuclei -u &quot;http://1337rokudenashi.dev&quot; -tags cve -silent</code></p><p>Menjalankan template CVE (kerentanan yang telah terdaftar). Untuk melihat apakah target terdampak oleh kerentanan publik tertentu.</p><hr><p>🔹 <code>nuclei -u &quot;http://1337rokudenashi.dev&quot; -workflows ~/nuclei-templates/workflows/ -silent</code></p><p>Mengaktifkan mode workflow. Nuclei akan menjalankan rangkaian pengujian otomatis, termasuk deteksi awal dan eksploitasi sesuai hasil. Satu perintah, banyak langkah.</p><hr><p>🔹 <code>nuclei -u &quot;http://1337rokudenashi.dev/artists.php?artist=1&quot; -dast -silent</code></p><p>Menggunakan metode DAST (Dynamic Application Security Testing). Cocok untuk memindai parameter URL dan interaksi aplikasi dari sisi luar.</p><hr><p>🔹 <code>nuclei -u &quot;http://1337rokudenashi.dev/artists.php?artist=1&quot; -fuzz-aggression high -silent</code></p><p>Mengaktifkan fuzzing dengan tingkat agresif tinggi. Mengirim berbagai input ke parameter untuk mendeteksi kerentanan yang tersembunyi atau kompleks.</p><hr>]]></content>
+    
+    
+    <categories>
+      
+      <category>1337rokudenashi</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>1337rokudenashi</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
   
 </search>
