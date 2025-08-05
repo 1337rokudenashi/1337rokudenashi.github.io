@@ -1,0 +1,54 @@
+---
+title: Write-Up | Interact with Nuclei
+excerpt: Nuclei adalah pemindai kerentanan modern berkinerja tinggi yang memanfaatkan templat berbasis YAML sederhana...
+date: 1337-03-01 01:37:00
+tags: [1337rokudenashi]
+categories:
+  - [1337rokudenashi]
+index_img: https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi.github.io/main/yublueflower.jpg
+banner_img: https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi.github.io/main/1337yublueflower.jpg
+---
+
+Nuclei adalah pemindai kerentanan modern berkinerja tinggi yang memanfaatkan templat berbasis YAML sederhana. Ini memberdayakan kamu untuk merancang skenario deteksi kerentanan kustom yang meniru kondisi dunia nyata, yang mengarah ke nol positif palsu.
+
+🔹 `nuclei -u "http://1337rokudenashi.dev" -silent`
+
+Melakukan pemindaian pada satu URL secara langsung. Flag `-silent` digunakan agar hasil yang ditampilkan hanya temuan penting, tanpa detail tambahan dari template.
+
+---
+
+🔹 `nuclei -list 1337rokudenashi.txt -silent`
+
+Memindai banyak URL sekaligus dari file `1337rokudenashi.txt`. Cocok digunakan untuk bug bounty atau testing skala besar. Tetap sunyi, hanya menampilkan hasil valid.
+
+---
+
+🔹 `nuclei -u "http://1337rokudenashi.dev" -header "Cookie: laravel_session=...; XSRF-TOKEN=..." -silent`
+
+Menyertakan header (seperti cookie) untuk melakukan scan pada endpoint yang membutuhkan autentikasi. Penting untuk menguji area yang tidak publik.
+
+---
+
+🔹 `nuclei -u "http://1337rokudenashi.dev" -tags cve -silent`
+
+Menjalankan template CVE (kerentanan yang telah terdaftar). Untuk melihat apakah target terdampak oleh kerentanan publik tertentu.
+
+---
+
+🔹 `nuclei -u "http://1337rokudenashi.dev" -workflows ~/nuclei-templates/workflows/ -silent`
+
+Mengaktifkan mode workflow. Nuclei akan menjalankan rangkaian pengujian otomatis, termasuk deteksi awal dan eksploitasi sesuai hasil. Satu perintah, banyak langkah.
+
+---
+
+🔹 `nuclei -u "http://1337rokudenashi.dev/artists.php?artist=1" -dast -silent`
+
+Menggunakan metode DAST (Dynamic Application Security Testing). Cocok untuk memindai parameter URL dan interaksi aplikasi dari sisi luar.
+
+---
+
+🔹 `nuclei -u "http://1337rokudenashi.dev/artists.php?artist=1" -fuzz-aggression high -silent`
+
+Mengaktifkan fuzzing dengan tingkat agresif tinggi. Mengirim berbagai input ke parameter untuk mendeteksi kerentanan yang tersembunyi atau kompleks.
+
+---
