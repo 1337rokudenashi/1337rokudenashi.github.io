@@ -1,6 +1,6 @@
 ---
-title: 1337rokudenashi
-excerpt: Hai! Saya Alpha Prima Galatheo Qallbu (1337rokudenashi), seorang Security Researcher · Security Engineer. Saya memiliki ketertarikan, pengetahuan, serta keterampilan dalam keamanan ofensif.
+title: 1337rokudenashi | Security Researcher · Security Engineer 
+excerpt: An experienced offensive security specialist with a background as a Security Researcher and Security Engineer. Skilled in offensive security tools such as Osmedeus, Nuclei, and Burp Suite, which are actively used in security testing, and experienced in orchestrating offensive security workflows and architecting Security as a Service (SECaaS).
 date: 1337-03-01 01:37:00
 tags: [1337rokudenashi]
 categories:
@@ -9,4 +9,4 @@ index_img: https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi.git
 banner_img: https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi.github.io/main/1337yublueflower.jpg
 ---
 
-Hai! Saya Alpha Prima Galatheo Qallbu (1337rokudenashi), seorang Security Researcher · Security Engineer. Saya memiliki ketertarikan, pengetahuan, serta keterampilan dalam keamanan ofensif.
+An experienced offensive security specialist with a background as a Security Researcher and Security Engineer. Skilled in offensive security tools such as Osmedeus, Nuclei, and Burp Suite, which are actively used in security testing, and experienced in orchestrating offensive security workflows and architecting Security as a Service (SECaaS).
