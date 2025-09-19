@@ -33,31 +33,6 @@
   
   
   <entry>
-    <title>Integrasi Notifikasi Keamanan dengan Notify dan Discord</title>
-    <link href="/9b8c7d6e-5f4a-4b3c-9d2e-1f0a2b3c4d5e/"/>
-    <url>/9b8c7d6e-5f4a-4b3c-9d2e-1f0a2b3c4d5e/</url>
-    
-    <content type="html"><![CDATA[<p>Di server Discord kamu, buka <strong>Pengaturan Saluran</strong> lalu pilih <strong>Integrasi</strong>. Klik <strong>Buat Webhook</strong> baru, beri nama (misalnya “Security Alerts”), dan <strong>salin URL Webhook</strong> yang diberikan. Ini adalah kunci utama untuk integrasi kita.</p><hr><p>Pastikan kamu sudah menginstal <strong>Go (versi 1.24+)</strong>. Buka terminal dan jalankan perintah berikut:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">go install -v github.com/projectdiscovery/notify/cmd/notify@latest<br></code></pre></td></tr></table></figure><p>Kamu bisa menjalankan <code>notify -h</code> untuk melihat bantuan.</p><hr><p>Buat atau buka konfigurasi di <code>~/.config/notify/provider-config.yaml</code>. Tambahkan konfigurasi berikut, dan <strong>ganti teks placeholder dengan URL Webhook Discord kamu</strong>:</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">discord:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">discord_webhook_url:</span> <span class="hljs-string">&quot;PASTE_YOUR_DISCORD_WEBHOOK_URL_HERE&quot;</span><br></code></pre></td></tr></table></figure><p>Simpan konfigurasi Notify setelah selesai.</p><hr><p>Dari terminal, coba kirim pesan pertama kamu:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Hai, 1337rokudenashi!&quot;</span> | notify -provider discord<br></code></pre></td></tr></table></figure><p>Selalu gunakan <code>-provider discord</code> agar Notify tahu harus mengirim pesan ke Discord. Periksa Discord kamu, maka…, pesan seharusnya sudah masuk.</p><hr><p>Itu saja! Sekarang, notifikasi keamanan kamu bisa langsung terkirim ke Discord.</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>1337rokudenashi</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>1337rokudenashi</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>yublueflower</title>
     <link href="/3c4d5e6f-7a8b-4b9c-8d0e-1f2a3b4c5d6e/"/>
     <url>/3c4d5e6f-7a8b-4b9c-8d0e-1f2a3b4c5d6e/</url>
