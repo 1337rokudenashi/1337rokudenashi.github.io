@@ -25,7 +25,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://wallpapercave.com/wp/wp3760526.jpg">
 <meta property="article:published_time" content="2025-10-01T01:37:00.000Z">
-<meta property="article:modified_time" content="2025-09-23T10:25:03.335Z">
+<meta property="article:modified_time" content="2025-09-26T08:54:09.245Z">
 <meta property="article:author" content="1337rokudenashi">
 <meta property="article:tag" content="wazuh">
 <meta property="article:tag" content="xdr">
@@ -281,18 +281,14 @@
 <blockquote>
 <p>The Wazuh dashboard is the web user interface for data visualization, analysis, and management.<br>It includes dashboards for regulatory compliance, vulnerabilities, file integrity, configuration assessment, cloud infrastructure events, among others.</p>
 </blockquote>
-<p><strong>Single universal agent</strong></p>
-<blockquote>
-<p>Wazuh agents are installed on endpoints such as laptops, desktops, servers, cloud instances, or virtual machines. They provide threat prevention, detection, and response capabilities.</p>
-</blockquote>
-<p><strong>Requirements:</strong></p>
+<p><strong>Requirements (central components):</strong></p>
 <ul>
 <li>Ubuntu 16.04–24.04 (64-bit)</li>
 <li>x86_64&#x2F;ARM64</li>
 <li>CPU 4vCPU, RAM 8GB, Storage 50GB</li>
 </ul>
-<p><strong>Install Wazuh:</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">curl -sO https://packages.wazuh.com/4.12/wazuh-install.sh &amp;&amp; sudo bash ./wazuh-install.sh -a --overwrite -p 1337<br></code></pre></td></tr></table></figure>
+<p><strong>Install Wazuh central components:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">curl -sO https://packages.wazuh.com/4.13/wazuh-install.sh &amp;&amp; sudo bash ./wazuh-install.sh -a --overwrite -p 1337<br></code></pre></td></tr></table></figure>
 
 <p>Flags explained:</p>
 <ul>
@@ -322,7 +318,29 @@
 <blockquote>
 <p>Provides usernames and passwords for Wazuh API, Indexer, and Dashboard.</p>
 </blockquote>
-<p>If you want to uninstall the Wazuh central components, run the Wazuh installation assistant using the option <code>-u</code> or <code>–-uninstall</code>.</p>
+<p>If you want to uninstall the Wazuh central components, run the Wazuh installation assistant using the option <code>sudo bash ./wazuh-install.sh --uninstall </code> or <code>curl -sO https://packages.wazuh.com/4.13/wazuh-install.sh &amp;&amp; sudo bash ./wazuh-install.sh --uninstall</code>.</p>
+<p><strong>Single universal agent</strong></p>
+<blockquote>
+<p>Wazuh agents are installed on endpoints such as laptops, desktops, servers, cloud instances, or virtual machines. They provide threat prevention, detection, and response capabilities.</p>
+</blockquote>
+<p><strong>Requirements (agent):</strong></p>
+<ul>
+<li>Ubuntu&#x2F;Debian Linux (64-bit)</li>
+<li>Root privileges</li>
+<li>Network connectivity to Wazuh server</li>
+</ul>
+<p><strong>Install Wazuh agent:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">wget https://packages.wazuh.com/4.x/apt/pool/main/w/wazuh-agent/wazuh-agent_4.13.1-1_amd64.deb &amp;&amp; sudo WAZUH_MANAGER=<span class="hljs-string">&#x27;13.37.0.1&#x27;</span> WAZUH_AGENT_NAME=<span class="hljs-string">&#x27;1337rokudenashi&#x27;</span> dpkg -i ./wazuh-agent_4.13.1-1_amd64.deb<br></code></pre></td></tr></table></figure>
+
+<p>Flags explained:</p>
+<ul>
+<li><code>WAZUH_MANAGER=&#39;13.37.0.1&#39;</code> → Wazuh server address</li>
+<li><code>WAZUH_AGENT_NAME=&#39;1337rokudenashi&#39;</code> → Unique agent ID</li>
+</ul>
+<p><strong>Enable and start the agent:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo systemctl daemon-reload<br>sudo systemctl <span class="hljs-built_in">enable</span> wazuh-agent<br>sudo systemctl start wazuh-agent<br></code></pre></td></tr></table></figure>
+
+<p>With the agent active, your infrastructure stays connected, reporting logs, threats, and compliance data without missing a beat.</p>
 
                 
               </div>
