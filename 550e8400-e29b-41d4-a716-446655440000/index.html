@@ -25,7 +25,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://wallpapercave.com/wp/wp3760526.jpg">
 <meta property="article:published_time" content="2025-10-01T01:37:00.000Z">
-<meta property="article:modified_time" content="2025-09-26T08:54:09.245Z">
+<meta property="article:modified_time" content="2025-09-26T09:32:41.738Z">
 <meta property="article:author" content="1337rokudenashi">
 <meta property="article:tag" content="wazuh">
 <meta property="article:tag" content="xdr">
@@ -288,13 +288,13 @@
 <li>CPU 4vCPU, RAM 8GB, Storage 50GB</li>
 </ul>
 <p><strong>Install Wazuh central components:</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">curl -sO https://packages.wazuh.com/4.13/wazuh-install.sh &amp;&amp; sudo bash ./wazuh-install.sh -a --overwrite -p 1337<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">curl -sO https://packages.wazuh.com/4.13/wazuh-install.sh &amp;&amp; sudo bash ./wazuh-install.sh -o -p 1337 -a<br></code></pre></td></tr></table></figure>
 
 <p>Flags explained:</p>
 <ul>
-<li><code>-a</code> → install &amp; configure Server, Indexer, Dashboard</li>
-<li><code>--overwrite</code> → replace existing config&#x2F;data</li>
+<li><code>-o</code> → replace existing config&#x2F;data</li>
 <li><code>-p 1337</code> → set Dashboard&#x2F;API port</li>
+<li><code>-a</code> → install &amp; configure Server, Indexer, Dashboard</li>
 </ul>
 <p><strong>Disable auto-updates:</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo sed -i <span class="hljs-string">&quot;s/^deb /#deb /&quot;</span> /etc/apt/sources.list.d/wazuh.list<br>sudo apt update<br></code></pre></td></tr></table></figure>
@@ -318,7 +318,7 @@
 <blockquote>
 <p>Provides usernames and passwords for Wazuh API, Indexer, and Dashboard.</p>
 </blockquote>
-<p>If you want to uninstall the Wazuh central components, run the Wazuh installation assistant using the option <code>sudo bash ./wazuh-install.sh --uninstall </code> or <code>curl -sO https://packages.wazuh.com/4.13/wazuh-install.sh &amp;&amp; sudo bash ./wazuh-install.sh --uninstall</code>.</p>
+<p>If you want to uninstall the Wazuh central components, run the Wazuh installation assistant using the option <code>sudo bash ./wazuh-install.sh -u </code> or <code>curl -sO https://packages.wazuh.com/4.13/wazuh-install.sh &amp;&amp; sudo bash ./wazuh-install.sh -u</code>.</p>
 <p><strong>Single universal agent</strong></p>
 <blockquote>
 <p>Wazuh agents are installed on endpoints such as laptops, desktops, servers, cloud instances, or virtual machines. They provide threat prevention, detection, and response capabilities.</p>
