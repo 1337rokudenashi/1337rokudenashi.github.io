@@ -16,24 +16,29 @@
   <meta name="author" content="1337rokudenashi">
   <meta name="keywords" content="1337rokudenashi">
   
-    <meta name="description" content="Nuclei adalah pemindai kerentanan modern berkinerja tinggi yang memanfaatkan templat berbasis YAML sederhana...">
+    <meta name="description" content="Start observing, protecting, and adapting your network with Suricata to monitor, analyze, and detect network threats in real time.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Write-Up | Interact with Nuclei">
+<meta property="og:title" content="Suricata EVE Logs to Wazuh">
 <meta property="og:url" content="https://1337rokudenashi.github.io/6f1a9d2b-4c3f-4b9a-8f5d-1a2b3c4d5e6f/index.html">
 <meta property="og:site_name" content="1337rokudenashi">
-<meta property="og:description" content="Nuclei adalah pemindai kerentanan modern berkinerja tinggi yang memanfaatkan templat berbasis YAML sederhana...">
+<meta property="og:description" content="Start observing, protecting, and adapting your network with Suricata to monitor, analyze, and detect network threats in real time.">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi.github.io/main/yublueflower.jpg">
-<meta property="article:published_time" content="1337-03-01T01:37:00.000Z">
-<meta property="article:modified_time" content="2025-12-26T09:09:43.745Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi/main/3470rokudenashi.jpg">
+<meta property="article:published_time" content="2025-10-31T01:37:00.000Z">
+<meta property="article:modified_time" content="2026-01-28T09:02:07.854Z">
 <meta property="article:author" content="1337rokudenashi">
-<meta property="article:tag" content="1337rokudenashi">
+<meta property="article:tag" content="wazuh">
+<meta property="article:tag" content="xdr">
+<meta property="article:tag" content="siem">
+<meta property="article:tag" content="suricata">
+<meta property="article:tag" content="ids">
+<meta property="article:tag" content="ips">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi.github.io/main/yublueflower.jpg">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi/main/3470rokudenashi.jpg">
   
   
   
-  <title>Write-Up | Interact with Nuclei - 1337rokudenashi</title>
+  <title>Suricata EVE Logs to Wazuh - 1337rokudenashi</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -193,13 +198,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi.github.io/main/1337yublueflower.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi/main/3470rokudenashi.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Write-Up | Interact with Nuclei"></span>
+            <span id="subtitle" data-typed-text="Suricata EVE Logs to Wazuh"></span>
           
         </div>
 
@@ -210,8 +215,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="1337-03-01 01:37" pubdate>
-          March 1, 1337 am
+        <time datetime="2025-10-31 01:37" pubdate>
+          October 31, 2025 am
         </time>
       </span>
     
@@ -226,7 +231,7 @@
         
         
         
-          1 mins
+          2 mins
         
       </span>
     
@@ -263,33 +268,76 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Write-Up | Interact with Nuclei</h1>
+            <h1 id="seo-header">Suricata EVE Logs to Wazuh</h1>
             
             
               <div class="markdown-body">
                 
-                <p>Nuclei adalah pemindai kerentanan modern berkinerja tinggi yang memanfaatkan templat berbasis YAML sederhana. Ini memberdayakan kamu untuk merancang skenario deteksi kerentanan kustom yang meniru kondisi dunia nyata, yang mengarah ke nol positif palsu.</p>
-<p>🔹 <code>nuclei -u &quot;http://1337rokudenashi.dev&quot; -silent</code></p>
-<p>Melakukan pemindaian pada satu URL secara langsung. Flag <code>-silent</code> digunakan agar hasil yang ditampilkan hanya temuan penting, tanpa detail tambahan dari template.</p>
-<hr>
-<p>🔹 <code>nuclei -list 1337rokudenashi.txt -silent</code></p>
-<p>Memindai banyak URL sekaligus dari file <code>1337rokudenashi.txt</code>. Cocok digunakan untuk bug bounty atau testing skala besar. Tetap sunyi, hanya menampilkan hasil valid.</p>
-<hr>
-<p>🔹 <code>nuclei -u &quot;http://1337rokudenashi.dev&quot; -header &quot;Cookie: laravel_session=...; XSRF-TOKEN=...&quot; -silent</code></p>
-<p>Menyertakan header (seperti cookie) untuk melakukan scan pada endpoint yang membutuhkan autentikasi. Penting untuk menguji area yang tidak publik.</p>
-<hr>
-<p>🔹 <code>nuclei -u &quot;http://1337rokudenashi.dev&quot; -tags cve -silent</code></p>
-<p>Menjalankan template CVE (kerentanan yang telah terdaftar). Untuk melihat apakah target terdampak oleh kerentanan publik tertentu.</p>
-<hr>
-<p>🔹 <code>nuclei -u &quot;http://1337rokudenashi.dev&quot; -workflows ~/nuclei-templates/workflows/ -silent</code></p>
-<p>Mengaktifkan mode workflow. Nuclei akan menjalankan rangkaian pengujian otomatis, termasuk deteksi awal dan eksploitasi sesuai hasil. Satu perintah, banyak langkah.</p>
-<hr>
-<p>🔹 <code>nuclei -u &quot;http://1337rokudenashi.dev/artists.php?artist=1&quot; -dast -silent</code></p>
-<p>Menggunakan metode DAST (Dynamic Application Security Testing). Cocok untuk memindai parameter URL dan interaksi aplikasi dari sisi luar.</p>
-<hr>
-<p>🔹 <code>nuclei -u &quot;http://1337rokudenashi.dev/artists.php?artist=1&quot; -fuzz-aggression high -silent</code></p>
-<p>Mengaktifkan fuzzing dengan tingkat agresif tinggi. Mengirim berbagai input ke parameter untuk mendeteksi kerentanan yang tersembunyi atau kompleks.</p>
-<hr>
+                <p>Start observing, protecting, and adapting your network with Suricata to monitor, analyze, and detect network threats in real time.</p>
+<p><strong>Suricata</strong></p>
+<blockquote>
+<p>Suricata is a high performance, open source network analysis and threat detection software used by most private and public organizations, and embedded by major vendors to protect their assets.</p>
+</blockquote>
+<blockquote>
+<p>Suricata generates structured EVE logs collected to Wazuh, enabling centralized detection, correlation, and analysis of network security events.</p>
+</blockquote>
+<p><strong>Requirements (Suricata host):</strong></p>
+<ul>
+<li>Ubuntu 16.04–24.04 (64-bit)</li>
+<li>x86_64&#x2F;ARM64</li>
+<li>Root privileges</li>
+<li>Active network interface with AF-Packet</li>
+<li>CPU 4vCPU, RAM 8GB, Storage 50GB</li>
+</ul>
+<p><strong>Install Suricata:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt-get install software-properties-common<br>sudo add-apt-repository ppa:oisf/suricata-stable<br>sudo apt-get update<br>sudo apt-get install suricata jq<br></code></pre></td></tr></table></figure>
+
+<p><strong>Configure Suricata:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo nano /etc/suricata/suricata.yaml<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs bash">HOME_NET: <span class="hljs-string">&quot;&lt;IP_UBUNTU&gt;&quot;</span><br>EXTERNAL_NET: <span class="hljs-string">&quot;any&quot;</span><br><br>default-rule-path: /etc/suricata/rules<br>rule-files:<br>  - <span class="hljs-string">&quot;*.rules&quot;</span><br><br>stats:<br>  enabled: <span class="hljs-built_in">yes</span><br><br>af-packet:<br>  - interface: enp0s3<br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>Replace <IP_UBUNTU> with your system IP address and adjust the network interface name if needed.</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo systemctl restart suricata<br></code></pre></td></tr></table></figure>
+
+<p><strong>Suricata Rules:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /tmp/<br>curl -LO https://rules.emergingthreats.net/open/suricata-8.0.1/emerging.rules.tar.gz<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo tar -xvzf emerging.rules.tar.gz<br>sudo <span class="hljs-built_in">mkdir</span> /etc/suricata/rules<br>sudo <span class="hljs-built_in">mv</span> rules/*.rules /etc/suricata/rules/<br>sudo <span class="hljs-built_in">chmod</span> 777 /etc/suricata/rules/*.rules<br></code></pre></td></tr></table></figure>
+
+<p><strong>Verify Suricata:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo systemctl status suricata<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">tail</span> -f /var/log/suricata/eve.json | jq .<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Monitor Suricata EVE logs.</p>
+</blockquote>
+<p><strong>Requirements (Wazuh agent):</strong></p>
+<ul>
+<li>Ubuntu&#x2F;Debian Linux (64-bit)</li>
+<li>Root privileges</li>
+<li>Network connectivity to Wazuh server</li>
+<li>Wazuh agent installed and enrolled</li>
+<li>Read access to &#x2F;var&#x2F;log&#x2F;suricata&#x2F;eve.json</li>
+</ul>
+<p><strong>Integrate Suricata with Wazuh:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo nano /var/ossec/etc/ossec.conf<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">&lt;localfile&gt;<br>  &lt;log_format&gt;json&lt;/log_format&gt;<br>  &lt;location&gt;/var/log/suricata/eve.json&lt;/location&gt;<br>&lt;/localfile&gt;<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo systemctl restart wazuh-agent<br></code></pre></td></tr></table></figure>
+
+<p><strong>Verify the Integration:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ping -c 20 <span class="hljs-string">&quot;&lt;IP_UBUNTU&gt;&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>Suricata in Wazuh Dashboard:</p>
+<ul>
+<li>Log in to Wazuh Dashboard</li>
+<li>Open Threat Hunting <code>rule.groups:suricata</code></li>
+</ul>
+<p>Suricata network alerts are now ingested into Wazuh XDR&#x2F;SIEM, enabling unified visibility across endpoint and network telemetry within a single security platform.</p>
 
                 
               </div>
@@ -308,7 +356,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/1337rokudenashi/" class="category-chain-item">1337rokudenashi</a>
+  <a href="/categories/Wazuh-Open-Source-XDR-Open-Source-SIEM/" class="category-chain-item">Wazuh - Open Source XDR. Open Source SIEM</a>
   
   
 
@@ -323,7 +371,17 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/1337rokudenashi/" class="print-no-link">#1337rokudenashi</a>
+        <a href="/tags/wazuh/" class="print-no-link">#wazuh</a>
+      
+        <a href="/tags/xdr/" class="print-no-link">#xdr</a>
+      
+        <a href="/tags/siem/" class="print-no-link">#siem</a>
+      
+        <a href="/tags/suricata/" class="print-no-link">#suricata</a>
+      
+        <a href="/tags/ids/" class="print-no-link">#ids</a>
+      
+        <a href="/tags/ips/" class="print-no-link">#ips</a>
       
     </div>
   
@@ -335,7 +393,7 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Write-Up | Interact with Nuclei</div>
+      <div>Suricata EVE Logs to Wazuh</div>
       <div>https://1337rokudenashi.github.io/6f1a9d2b-4c3f-4b9a-8f5d-1a2b3c4d5e6f/</div>
     </div>
     <div class="license-meta">
@@ -348,7 +406,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>March 1, 1337</div>
+          <div>October 31, 2025</div>
         </div>
       
       
@@ -375,6 +433,23 @@
 
 
 
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/1a0b64f9-65c8-4fc5-909a-26d09f93b27e/" title="Security Researchers at 株式会社サイバーエージェント (CyberAgent Inc.)">
+                        <span class="hidden-mobile">Security Researchers at 株式会社サイバーエージェント (CyberAgent Inc.)</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
               
             </div>
 

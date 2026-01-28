@@ -4,6 +4,41 @@
   
   
   <entry>
+    <title>Suricata EVE Logs to Wazuh</title>
+    <link href="/6f1a9d2b-4c3f-4b9a-8f5d-1a2b3c4d5e6f/"/>
+    <url>/6f1a9d2b-4c3f-4b9a-8f5d-1a2b3c4d5e6f/</url>
+    
+    <content type="html"><![CDATA[<p>Start observing, protecting, and adapting your network with Suricata to monitor, analyze, and detect network threats in real time.</p><p><strong>Suricata</strong></p><blockquote><p>Suricata is a high performance, open source network analysis and threat detection software used by most private and public organizations, and embedded by major vendors to protect their assets.</p></blockquote><blockquote><p>Suricata generates structured EVE logs collected to Wazuh, enabling centralized detection, correlation, and analysis of network security events.</p></blockquote><p><strong>Requirements (Suricata host):</strong></p><ul><li>Ubuntu 16.04–24.04 (64-bit)</li><li>x86_64&#x2F;ARM64</li><li>Root privileges</li><li>Active network interface with AF-Packet</li><li>CPU 4vCPU, RAM 8GB, Storage 50GB</li></ul><p><strong>Install Suricata:</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt-get install software-properties-common<br>sudo add-apt-repository ppa:oisf/suricata-stable<br>sudo apt-get update<br>sudo apt-get install suricata jq<br></code></pre></td></tr></table></figure><p><strong>Configure Suricata:</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo nano /etc/suricata/suricata.yaml<br></code></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs bash">HOME_NET: <span class="hljs-string">&quot;&lt;IP_UBUNTU&gt;&quot;</span><br>EXTERNAL_NET: <span class="hljs-string">&quot;any&quot;</span><br><br>default-rule-path: /etc/suricata/rules<br>rule-files:<br>  - <span class="hljs-string">&quot;*.rules&quot;</span><br><br>stats:<br>  enabled: <span class="hljs-built_in">yes</span><br><br>af-packet:<br>  - interface: enp0s3<br></code></pre></td></tr></table></figure><blockquote><p>Replace <IP_UBUNTU> with your system IP address and adjust the network interface name if needed.</p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo systemctl restart suricata<br></code></pre></td></tr></table></figure><p><strong>Suricata Rules:</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /tmp/<br>curl -LO https://rules.emergingthreats.net/open/suricata-8.0.1/emerging.rules.tar.gz<br></code></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo tar -xvzf emerging.rules.tar.gz<br>sudo <span class="hljs-built_in">mkdir</span> /etc/suricata/rules<br>sudo <span class="hljs-built_in">mv</span> rules/*.rules /etc/suricata/rules/<br>sudo <span class="hljs-built_in">chmod</span> 777 /etc/suricata/rules/*.rules<br></code></pre></td></tr></table></figure><p><strong>Verify Suricata:</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo systemctl status suricata<br></code></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">tail</span> -f /var/log/suricata/eve.json | jq .<br></code></pre></td></tr></table></figure><blockquote><p>Monitor Suricata EVE logs.</p></blockquote><p><strong>Requirements (Wazuh agent):</strong></p><ul><li>Ubuntu&#x2F;Debian Linux (64-bit)</li><li>Root privileges</li><li>Network connectivity to Wazuh server</li><li>Wazuh agent installed and enrolled</li><li>Read access to &#x2F;var&#x2F;log&#x2F;suricata&#x2F;eve.json</li></ul><p><strong>Integrate Suricata with Wazuh:</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo nano /var/ossec/etc/ossec.conf<br></code></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">&lt;localfile&gt;<br>  &lt;log_format&gt;json&lt;/log_format&gt;<br>  &lt;location&gt;/var/log/suricata/eve.json&lt;/location&gt;<br>&lt;/localfile&gt;<br></code></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo systemctl restart wazuh-agent<br></code></pre></td></tr></table></figure><p><strong>Verify the Integration:</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ping -c 20 <span class="hljs-string">&quot;&lt;IP_UBUNTU&gt;&quot;</span><br></code></pre></td></tr></table></figure><p>Suricata in Wazuh Dashboard:</p><ul><li>Log in to Wazuh Dashboard</li><li>Open Threat Hunting <code>rule.groups:suricata</code></li></ul><p>Suricata network alerts are now ingested into Wazuh XDR&#x2F;SIEM, enabling unified visibility across endpoint and network telemetry within a single security platform.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Wazuh - Open Source XDR. Open Source SIEM</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>wazuh</tag>
+      
+      <tag>xdr</tag>
+      
+      <tag>siem</tag>
+      
+      <tag>suricata</tag>
+      
+      <tag>ids</tag>
+      
+      <tag>ips</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Security Researchers at 株式会社サイバーエージェント (CyberAgent Inc.)</title>
     <link href="/1a0b64f9-65c8-4fc5-909a-26d09f93b27e/"/>
     <url>/1a0b64f9-65c8-4fc5-909a-26d09f93b27e/</url>
