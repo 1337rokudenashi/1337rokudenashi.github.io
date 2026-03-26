@@ -18,18 +18,15 @@
   
     <meta name="description" content="Start observing, protecting, and adapting your network with Suricata to monitor, analyze, and detect network threats in real time.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Suricata EVE Logs Observed via Wazuh SIEM">
+<meta property="og:title" content="Suricata - IDS&#x2F;IPS. Observe Protect Adapt">
 <meta property="og:url" content="https://1337rokudenashi.github.io/6f1a9d2b-4c3f-4b9a-8f5d-1a2b3c4d5e6f/index.html">
 <meta property="og:site_name" content="1337rokudenashi">
 <meta property="og:description" content="Start observing, protecting, and adapting your network with Suricata to monitor, analyze, and detect network threats in real time.">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi/main/3470rokudenashi.jpg">
 <meta property="article:published_time" content="2025-10-31T01:37:00.000Z">
-<meta property="article:modified_time" content="2026-03-26T09:59:54.479Z">
+<meta property="article:modified_time" content="2026-03-26T10:32:02.901Z">
 <meta property="article:author" content="1337rokudenashi">
-<meta property="article:tag" content="wazuh">
-<meta property="article:tag" content="xdr">
-<meta property="article:tag" content="siem">
 <meta property="article:tag" content="suricata">
 <meta property="article:tag" content="ids">
 <meta property="article:tag" content="ips">
@@ -38,7 +35,7 @@
   
   
   
-  <title>Suricata EVE Logs Observed via Wazuh SIEM - 1337rokudenashi</title>
+  <title>Suricata - IDS/IPS. Observe Protect Adapt - 1337rokudenashi</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -204,7 +201,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Suricata EVE Logs Observed via Wazuh SIEM"></span>
+            <span id="subtitle" data-typed-text="Suricata - IDS/IPS. Observe Protect Adapt"></span>
           
         </div>
 
@@ -268,7 +265,7 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Suricata EVE Logs Observed via Wazuh SIEM</h1>
+            <h1 id="seo-header">Suricata - IDS/IPS. Observe Protect Adapt</h1>
             
             
               <div class="markdown-body">
@@ -283,30 +280,30 @@
 </blockquote>
 <p><strong>Requirements (Suricata host):</strong></p>
 <ul>
+<li>Wazuh XDR&#x2F;SIEM</li>
 <li>Ubuntu 16.04–24.04 (64-bit)</li>
 <li>x86_64&#x2F;ARM64</li>
 <li>Root privileges</li>
-<li>Active network interface with AF-Packet</li>
 <li>CPU 4vCPU, RAM 8GB, Storage 50GB</li>
 </ul>
 <p><strong>Install Suricata:</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt-get install software-properties-common<br>sudo add-apt-repository ppa:oisf/suricata-stable<br>sudo apt-get update<br>sudo apt-get install suricata jq<br></code></pre></td></tr></table></figure>
 
-<p><strong>Configure Suricata:</strong></p>
+<p><strong>Configure Suricata host:</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo nano /etc/suricata/suricata.yaml<br></code></pre></td></tr></table></figure>
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs bash">HOME_NET: <span class="hljs-string">&quot;&lt;IP_UBUNTU&gt;&quot;</span><br>EXTERNAL_NET: <span class="hljs-string">&quot;any&quot;</span><br><br>default-rule-path: /etc/suricata/rules<br>rule-files:<br>  - <span class="hljs-string">&quot;*.rules&quot;</span><br><br>stats:<br>  enabled: <span class="hljs-built_in">yes</span><br><br>af-packet:<br>  - interface: enp0s3<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs bash">HOME_NET: <span class="hljs-string">&quot;&lt;UBUNTU_IP&gt;&quot;</span><br>EXTERNAL_NET: <span class="hljs-string">&quot;any&quot;</span><br><br>default-rule-path: /etc/suricata/rules<br>rule-files:<br>  - <span class="hljs-string">&quot;*.rules&quot;</span><br><br>stats:<br>  enabled: <span class="hljs-built_in">yes</span><br><br>af-packet:<br>  - interface: enp0s3<br></code></pre></td></tr></table></figure>
 <blockquote>
 <p>Replace <code>&lt;UBUNTU_IP&gt;</code> with your system’s IP address and adjust the interface name <code>enp0s3</code> to match your environment.</p>
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo systemctl restart suricata<br></code></pre></td></tr></table></figure>
 
-<p><strong>Suricata Rules:</strong></p>
+<p><strong>Configure Suricata rules:</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /tmp/<br>curl -LO https://rules.emergingthreats.net/open/suricata-8.0.1/emerging.rules.tar.gz<br></code></pre></td></tr></table></figure>
 
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo tar -xvzf emerging.rules.tar.gz<br>sudo <span class="hljs-built_in">mkdir</span> /etc/suricata/rules<br>sudo <span class="hljs-built_in">mv</span> rules/*.rules /etc/suricata/rules/<br>sudo <span class="hljs-built_in">chmod</span> 777 /etc/suricata/rules/*.rules<br></code></pre></td></tr></table></figure>
 
-<p><strong>Verify Suricata Live Check:</strong></p>
+<p><strong>Review Suricata status:</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo systemctl status suricata<br></code></pre></td></tr></table></figure>
 
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">tail</span> -f /var/log/suricata/eve.json | jq .<br></code></pre></td></tr></table></figure>
@@ -315,18 +312,15 @@
 <ul>
 <li>Ubuntu&#x2F;Debian Linux (64-bit)</li>
 <li>Root privileges</li>
-<li>Network connectivity to Wazuh server</li>
-<li>Wazuh agent installed and enrolled</li>
-<li>Read access to &#x2F;var&#x2F;log&#x2F;suricata&#x2F;eve.json</li>
 </ul>
-<p><strong>Connect to Wazuh:</strong></p>
+<p><strong>Configure Wazuh agent:</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo nano /var/ossec/etc/ossec.conf<br></code></pre></td></tr></table></figure>
 
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">&lt;localfile&gt;<br>  &lt;log_format&gt;json&lt;/log_format&gt;<br>  &lt;location&gt;/var/log/suricata/eve.json&lt;/location&gt;<br>&lt;/localfile&gt;<br></code></pre></td></tr></table></figure>
 
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo systemctl restart wazuh-agent<br></code></pre></td></tr></table></figure>
 
-<p><strong>Verify Suricata EVE Collection:</strong></p>
+<p><strong>Review Suricata via Wazuh dashboard:</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ping -c 20 <span class="hljs-string">&quot;&lt;IP_UBUNTU&gt;&quot;</span><br></code></pre></td></tr></table></figure>
 
 <ul>
@@ -352,7 +346,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/Wazuh-Open-Source-XDR-Open-Source-SIEM/" class="category-chain-item">Wazuh - Open Source XDR. Open Source SIEM</a>
+  <a href="/categories/Security-Engineer/" class="category-chain-item">Security Engineer</a>
   
   
 
@@ -366,12 +360,6 @@
   
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/wazuh/" class="print-no-link">#wazuh</a>
-      
-        <a href="/tags/xdr/" class="print-no-link">#xdr</a>
-      
-        <a href="/tags/siem/" class="print-no-link">#siem</a>
       
         <a href="/tags/suricata/" class="print-no-link">#suricata</a>
       
@@ -389,7 +377,7 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Suricata EVE Logs Observed via Wazuh SIEM</div>
+      <div>Suricata - IDS/IPS. Observe Protect Adapt</div>
       <div>https://1337rokudenashi.github.io/6f1a9d2b-4c3f-4b9a-8f5d-1a2b3c4d5e6f/</div>
     </div>
     <div class="license-meta">
