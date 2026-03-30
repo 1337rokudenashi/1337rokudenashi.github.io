@@ -16,26 +16,26 @@
   <meta name="author" content="1337rokudenashi">
   <meta name="keywords" content="1337rokudenashi">
   
-    <meta name="description" content="XDR collects and correlates telemetry from endpoints, networks, and cloud to deliver continuous threat response.">
+    <meta name="description" content="Start handling and tagging Wazuh alerts with an Observed or Responded status to enable centralized monitoring and threat response.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="XDR Executed via Wazuh Status Observed or Responded">
+<meta property="og:title" content="Wazuh - Open Source XDR. Observed Responded">
 <meta property="og:url" content="https://1337rokudenashi.github.io/9b8c7d6e-5f4a-4b3c-9d2e-1f0a2b3c4d5e/index.html">
 <meta property="og:site_name" content="1337rokudenashi">
-<meta property="og:description" content="XDR collects and correlates telemetry from endpoints, networks, and cloud to deliver continuous threat response.">
+<meta property="og:description" content="Start handling and tagging Wazuh alerts with an Observed or Responded status to enable centralized monitoring and threat response.">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi/main/3470rokudenashi.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi.github.io/main/yublueflower.jpg">
 <meta property="article:published_time" content="2025-10-31T01:37:44.000Z">
-<meta property="article:modified_time" content="2026-03-30T04:22:25.146Z">
+<meta property="article:modified_time" content="2026-03-30T08:00:49.986Z">
 <meta property="article:author" content="1337rokudenashi">
 <meta property="article:tag" content="wazuh">
 <meta property="article:tag" content="xdr">
 <meta property="article:tag" content="bash">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi/main/3470rokudenashi.jpg">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi.github.io/main/yublueflower.jpg">
   
   
   
-  <title>XDR Executed via Wazuh Status Observed or Responded - 1337rokudenashi</title>
+  <title>Wazuh - Open Source XDR. Observed Responded - 1337rokudenashi</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -195,13 +195,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi/main/3470rokudenashi.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('https://raw.githubusercontent.com/1337rokudenashi/1337rokudenashi.github.io/main/1337yublueflower.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="XDR Executed via Wazuh Status Observed or Responded"></span>
+            <span id="subtitle" data-typed-text="Wazuh - Open Source XDR. Observed Responded"></span>
           
         </div>
 
@@ -228,7 +228,7 @@
         
         
         
-          3 mins
+          4 mins
         
       </span>
     
@@ -265,62 +265,66 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">XDR Executed via Wazuh Status Observed or Responded</h1>
+            <h1 id="seo-header">Wazuh - Open Source XDR. Observed Responded</h1>
             
             
               <div class="markdown-body">
                 
-                <p>XDR collects and correlates telemetry from endpoints, networks, and cloud to deliver continuous threat response, tagging alerts as “Observed” for passive monitoring and “Responded” when active defense is triggered.</p>
+                <p>Start handling and tagging Wazuh alerts with an Observed or Responded status to enable centralized monitoring and threat response.</p>
+<p><strong><code>&quot;status&quot;: &quot;Observed&quot;</code> and <code>&quot;status&quot;: &quot;Responded&quot;</code></strong></p>
 <blockquote>
-<p>If rule level ≥ 12 → <code>&quot;status&quot;: &quot;Observed&quot;</code></p>
+<p>XDR collects and correlates telemetry from endpoints, networks, and cloud to deliver continuous threat response, tagging alerts as “Observed” for passive monitoring and “Responded” when active defense is triggered.</p>
 </blockquote>
 <blockquote>
-<p>If rule level ≥ 12 and Active Response triggered → <code>&quot;status&quot;: &quot;Responded&quot;</code></p>
+<ul>
+<li>If rule level ≥ 12 → <code>&quot;status&quot;: &quot;Observed&quot;</code></li>
+<li>If rule level ≥ 12 and Active Response triggered → <code>&quot;status&quot;: &quot;Responded&quot;</code></li>
+<li>If rule level &lt; 12 → Ignored</li>
+</ul>
 </blockquote>
 <blockquote>
-<p>If rule level &lt; 12 → Ignored</p>
-</blockquote>
 <p>This configuration processes only high-impact security events to reduce noise and improve response focus.</p>
-<p><strong>Requirements</strong></p>
+</blockquote>
+<p><strong>Requirements (xdr-handler):</strong></p>
 <ul>
 <li>Wazuh XDR&#x2F;SIEM installed</li>
 <li>Active Response (<code>firewall-drop</code>) enabled</li>
+<li>Discord account</li>
 <li>Linux server (Ubuntu&#x2F;Debian)</li>
 <li>Non-root user: <code>1337rokudenashi</code></li>
 <li><code>jq</code> installed</li>
 <li><code>notify</code> (ProjectDiscovery) installed</li>
 <li>Log source: <code>/var/ossec/logs/alerts/alerts.json</code></li>
 </ul>
-<p><strong>Discord Webhook Setup</strong></p>
+<p><strong>Discord account:</strong></p>
 <p>Navigate to your Discord server settings, open <strong>Integrations</strong>, then <strong>Webhooks</strong>, and create a dedicated webhook for security monitoring. After creating it, copy the generated Webhook URL. This URL will be used by Notify to send <code>&quot;status&quot;: &quot;Observed&quot;</code> and <code>&quot;status&quot;: &quot;Responded&quot;</code> events directly to your Discord channel.</p>
-<p><strong>Configure Notify</strong></p>
-<p>Create configuration directory:</p>
+<p><strong>Workspace directory (Notify):</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">mkdir</span> -p /home/1337rokudenashi/.config/notify<br></code></pre></td></tr></table></figure>
 
-<p>Create provider configuration:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cat</span> &lt;&lt; <span class="hljs-string">&#x27;EOF&#x27;</span> &gt; /home/1337rokudenashi/.config/notify/provider-config.yaml<br>discord:<br>  - <span class="hljs-built_in">id</span>: xdr<br>    webhook_url: https://discord.com/api/webhooks/XXXX/YYYY<br>EOF<br></code></pre></td></tr></table></figure>
+<p><strong>Provider configuration:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cat</span> &lt;&lt; <span class="hljs-string">&#x27;EOF&#x27;</span> &gt; /home/1337rokudenashi/.config/notify/provider-config.yaml<br>discord:<br>  - <span class="hljs-built_in">id</span>: xdr-handler<br>    webhook_url: https://discord.com/api/webhooks/XXXX/YYYY<br>EOF<br></code></pre></td></tr></table></figure>
 
-<p>Test notification:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;XDR test message.&quot;</span> | /home/1337rokudenashi/go/bin/notify -provider discord -<span class="hljs-built_in">id</span> xdr<br></code></pre></td></tr></table></figure>
+<p><strong>Notify test message:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Wazuh - Open Source XDR test message.&quot;</span> | /home/1337rokudenashi/go/bin/notify -provider discord -<span class="hljs-built_in">id</span> xdr-handler<br></code></pre></td></tr></table></figure>
 
 <p>If the message appears in Discord, the integration is functioning correctly.</p>
-<p><strong>Create XDR Directory</strong></p>
+<p><strong>Workspace directory (xdr-handler):</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">mkdir</span> -p /home/1337rokudenashi/xdr<br></code></pre></td></tr></table></figure>
 
-<p><strong>Create XDR Processing Script</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cat</span> &lt;&lt; <span class="hljs-string">&#x27;EOF&#x27;</span> &gt; /home/1337rokudenashi/xdr/xdr<br><span class="hljs-comment">#!/usr/bin/env bash</span><br><span class="hljs-built_in">set</span> -euo pipefail<br><br><span class="hljs-built_in">tail</span>=/usr/bin/tail<br>jq=/usr/bin/jq<br>notify=/home/1337rokudenashi/go/bin/notify<br><br><span class="hljs-keyword">while</span> [ ! -f /var/ossec/logs/alerts/alerts.json ]; <span class="hljs-keyword">do</span><br>  <span class="hljs-built_in">sleep</span> 2<br><span class="hljs-keyword">done</span><br><br><span class="hljs-string">&quot;<span class="hljs-variable">$tail</span>&quot;</span> -F /var/ossec/logs/alerts/alerts.json | <span class="hljs-keyword">while</span> IFS= <span class="hljs-built_in">read</span> -r line; <span class="hljs-keyword">do</span><br>  payload=<span class="hljs-string">&quot;<span class="hljs-subst">$(</span></span><br><span class="hljs-subst"><span class="hljs-string">    <span class="hljs-string">&quot;<span class="hljs-variable">$jq</span>&quot;</span> -c &#x27;</span></span><br><span class="hljs-subst"><span class="hljs-string">      if (.rule.level | tonumber)</span> &gt;= 12 then</span><br><span class="hljs-string">        &#123;</span><br><span class="hljs-string">          status: &quot;</span>Observed<span class="hljs-string">&quot;,</span><br><span class="hljs-string">          time: .timestamp,</span><br><span class="hljs-string">          level: (.rule.level | tonumber),</span><br><span class="hljs-string">          rule: .rule.id,</span><br><span class="hljs-string">          desc: .rule.description,</span><br><span class="hljs-string">          agent: .agent.name,</span><br><span class="hljs-string">          srcip: .data.srcip</span><br><span class="hljs-string">        &#125;</span><br><span class="hljs-string">      elif (</span><br><span class="hljs-string">        (.rule.groups[]? == &quot;</span>active_response<span class="hljs-string">&quot;)</span><br><span class="hljs-string">        and ((.data.parameters.alert.rule.level | tonumber) &gt;= 12)</span><br><span class="hljs-string">      ) then</span><br><span class="hljs-string">        &#123;</span><br><span class="hljs-string">          status: &quot;</span>Responded<span class="hljs-string">&quot;,</span><br><span class="hljs-string">          time: .timestamp,</span><br><span class="hljs-string">          level: (.data.parameters.alert.rule.level | tonumber),</span><br><span class="hljs-string">          rule: .data.parameters.alert.rule.id,</span><br><span class="hljs-string">          desc: .data.parameters.alert.rule.description,</span><br><span class="hljs-string">          agent: .agent.name,</span><br><span class="hljs-string">          srcip: .data.parameters.alert.data.srcip,</span><br><span class="hljs-string">          action: .rule.description</span><br><span class="hljs-string">        &#125;</span><br><span class="hljs-string">      else empty end</span><br><span class="hljs-string">    &#x27; &lt;&lt;&lt;&quot;</span><span class="hljs-variable">$line</span><span class="hljs-string">&quot; || true</span><br><span class="hljs-string">  )&quot;</span><br><br>  <span class="hljs-keyword">if</span> [[ -n <span class="hljs-string">&quot;<span class="hljs-variable">$payload</span>&quot;</span> ]]; <span class="hljs-keyword">then</span><br>    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$payload</span>&quot;</span> | <span class="hljs-string">&quot;<span class="hljs-variable">$notify</span>&quot;</span> -provider discord -<span class="hljs-built_in">id</span> xdr -silent<br>  <span class="hljs-keyword">fi</span><br><span class="hljs-keyword">done</span><br>EOF<br></code></pre></td></tr></table></figure>
+<p><strong>Processing rules</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cat</span> &lt;&lt; <span class="hljs-string">&#x27;EOF&#x27;</span> &gt; /home/1337rokudenashi/xdr/xdr-handler<br><span class="hljs-comment">#!/usr/bin/env bash</span><br><span class="hljs-built_in">set</span> -euo pipefail<br><br><span class="hljs-built_in">tail</span>=/usr/bin/tail<br>jq=/usr/bin/jq<br>notify=/home/1337rokudenashi/go/bin/notify<br><br><span class="hljs-keyword">while</span> [ ! -f /var/ossec/logs/alerts/alerts.json ]; <span class="hljs-keyword">do</span><br>  <span class="hljs-built_in">sleep</span> 2<br><span class="hljs-keyword">done</span><br><br><span class="hljs-string">&quot;<span class="hljs-variable">$tail</span>&quot;</span> -F /var/ossec/logs/alerts/alerts.json | <span class="hljs-keyword">while</span> IFS= <span class="hljs-built_in">read</span> -r line; <span class="hljs-keyword">do</span><br>  payload=<span class="hljs-string">&quot;<span class="hljs-subst">$(</span></span><br><span class="hljs-subst"><span class="hljs-string">    <span class="hljs-string">&quot;<span class="hljs-variable">$jq</span>&quot;</span> -c &#x27;</span></span><br><span class="hljs-subst"><span class="hljs-string">      if (.rule.level | tonumber)</span> &gt;= 12 then</span><br><span class="hljs-string">        &#123;</span><br><span class="hljs-string">          status: &quot;</span>Observed<span class="hljs-string">&quot;,</span><br><span class="hljs-string">          time: .timestamp,</span><br><span class="hljs-string">          level: (.rule.level | tonumber),</span><br><span class="hljs-string">          rule: .rule.id,</span><br><span class="hljs-string">          desc: .rule.description,</span><br><span class="hljs-string">          agent: .agent.name,</span><br><span class="hljs-string">          srcip: .data.srcip</span><br><span class="hljs-string">        &#125;</span><br><span class="hljs-string">      elif (</span><br><span class="hljs-string">        (.rule.groups[]? == &quot;</span>active_response<span class="hljs-string">&quot;)</span><br><span class="hljs-string">        and ((.data.parameters.alert.rule.level | tonumber) &gt;= 12)</span><br><span class="hljs-string">      ) then</span><br><span class="hljs-string">        &#123;</span><br><span class="hljs-string">          status: &quot;</span>Responded<span class="hljs-string">&quot;,</span><br><span class="hljs-string">          time: .timestamp,</span><br><span class="hljs-string">          level: (.data.parameters.alert.rule.level | tonumber),</span><br><span class="hljs-string">          rule: .data.parameters.alert.rule.id,</span><br><span class="hljs-string">          desc: .data.parameters.alert.rule.description,</span><br><span class="hljs-string">          agent: .agent.name,</span><br><span class="hljs-string">          srcip: .data.parameters.alert.data.srcip,</span><br><span class="hljs-string">          action: .rule.description</span><br><span class="hljs-string">        &#125;</span><br><span class="hljs-string">      else empty end</span><br><span class="hljs-string">    &#x27; &lt;&lt;&lt;&quot;</span><span class="hljs-variable">$line</span><span class="hljs-string">&quot; || true</span><br><span class="hljs-string">  )&quot;</span><br><br>  <span class="hljs-keyword">if</span> [[ -n <span class="hljs-string">&quot;<span class="hljs-variable">$payload</span>&quot;</span> ]]; <span class="hljs-keyword">then</span><br>    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$payload</span>&quot;</span> | <span class="hljs-string">&quot;<span class="hljs-variable">$notify</span>&quot;</span> -provider discord -<span class="hljs-built_in">id</span> xdr-handler -silent<br>  <span class="hljs-keyword">fi</span><br><span class="hljs-keyword">done</span><br>EOF<br></code></pre></td></tr></table></figure>
 
-<p>Set permissions:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo <span class="hljs-built_in">chown</span> 1337rokudenashi:1337rokudenashi /home/1337rokudenashi/xdr/xdr<br>sudo <span class="hljs-built_in">chmod</span> +x /home/1337rokudenashi/xdr/xdr<br></code></pre></td></tr></table></figure>
+<p><strong>Ownership and permissions:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo <span class="hljs-built_in">chown</span> 1337rokudenashi:1337rokudenashi /home/1337rokudenashi/xdr/xdr-handler<br>sudo <span class="hljs-built_in">chmod</span> +x /home/1337rokudenashi/xdr/xdr-handler<br></code></pre></td></tr></table></figure>
 
-<p><strong>Create systemd Service</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo <span class="hljs-built_in">tee</span> /etc/systemd/system/xdr.service &gt; /dev/null &lt;&lt; <span class="hljs-string">&#x27;EOF&#x27;</span><br>[Unit]<br>Description=XDR Service<br>After=network.target wazuh-manager.service<br><br>[Service]<br>Type=simple<br>User=1337rokudenashi<br>ExecStart=/home/1337rokudenashi/xdr/xdr<br>Restart=always<br>RestartSec=5<br><br>[Install]<br>WantedBy=multi-user.target<br>EOF<br></code></pre></td></tr></table></figure>
+<p><strong>Configure systemd:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo <span class="hljs-built_in">tee</span> /etc/systemd/system/xdr-handler.service &gt; /dev/null &lt;&lt; <span class="hljs-string">&#x27;EOF&#x27;</span><br>[Unit]<br>Description=xdr-handler<br>After=network.target wazuh-manager.service<br><br>[Service]<br>Type=simple<br>User=1337rokudenashi<br>ExecStart=/home/1337rokudenashi/xdr/xdr-handler<br>Restart=always<br>RestartSec=5<br><br>[Install]<br>WantedBy=multi-user.target<br>EOF<br></code></pre></td></tr></table></figure>
 
-<p>Reload and start service:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo systemctl daemon-reload<br>sudo systemctl <span class="hljs-built_in">enable</span> xdr<br>sudo systemctl start xdr<br></code></pre></td></tr></table></figure>
+<p><strong>Restart service:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo systemctl daemon-reload<br>sudo systemctl <span class="hljs-built_in">enable</span> xdr-handler<br>sudo systemctl start xdr-handler<br></code></pre></td></tr></table></figure>
 
-<p>Check service status:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">systemctl status xdr<br></code></pre></td></tr></table></figure>
+<p><strong>Review service status:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">systemctl status xdr-handler<br></code></pre></td></tr></table></figure>
 
 <p>High-severity events are continuously tracked and sent in JSON, providing clear distinction between “Observed” and “Responded” activities.</p>
 
@@ -372,7 +376,7 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>XDR Executed via Wazuh Status Observed or Responded</div>
+      <div>Wazuh - Open Source XDR. Observed Responded</div>
       <div>https://1337rokudenashi.github.io/9b8c7d6e-5f4a-4b3c-9d2e-1f0a2b3c4d5e/</div>
     </div>
     <div class="license-meta">
